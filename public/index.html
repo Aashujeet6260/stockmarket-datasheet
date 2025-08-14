@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Market Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="nav">
+  <h1>Stock Market Dashboard</h1>
+  <i class="fas fa-bars hamburger" id="hamburger"></i>
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="https://www.nseindia.com/"><i class="fas fa-info-circle"></i> About</a></li>
+      <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+</div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <h2>Companies</h2>
+            <ul id="company-list"></ul>
+        </div>
+        <div class="main">
+            <h1 id="stock-title">Select a Company</h1>
+            <canvas id="stockChart" width="800" height="400"></canvas>
+            <div id="metrics"></div>
+            <div id="prediction"></div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+    <p>© 2025 Stock Market Dashboard. All Rights Reserved.</p>
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Support</a>
+    </div>
+</footer>
+
+    
+    <script src="script.js">
+  // Hamburger menu toggle
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById("menu").classList.toggle("show");
+  });
+
+  // Show company data only on click
+  function selectCompany(symbol) {
+    document.getElementById('stock-title').innerText = `Stock Data for ${symbol}`;
+  }
+    </script>
+</body>
+</html> 
