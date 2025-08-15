@@ -1,5 +1,9 @@
 
 # Stock Market Dashboard — Backend
+
+#Deploy on Render 
+click - Visit - https://stockmarket-datasheet.onrender.com
+
 ## Overview
 This is a Node.js + SQLite backend for a Stock Market Dashboard.  
 Features:
